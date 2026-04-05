@@ -8,13 +8,13 @@ Built to explore the tradeoffs between optimistic and pessimistic concurrency co
 
 ## Features
 
-- **OCC** — read-phase, validation-phase, write-phase with exponential backoff and jitter on retry
-- **Conservative 2PL** — all-or-nothing lock acquisition with livelock prevention via timestamp-based priority escalation
-- **RocksDB storage layer** — persistent key-value backend with serialization/deserialization
-- **Hotset-based contention modeling** — configurable hot key probability and hot set size
-- **Benchmarking** — throughput (txns/sec), p50/p95/p99 latency, retry rate across thread counts and contention levels
-- **Automated experiment runner** — sweep threads and contention for both protocols
-- **Visualization** — Python plotting scripts for all benchmark results
+- **OCC** - read-phase, validation-phase, write-phase with exponential backoff and jitter on retry
+- **Conservative 2PL** - all-or-nothing lock acquisition with livelock prevention via timestamp-based priority escalation
+- **RocksDB storage layer** - persistent key-value backend with serialization/deserialization
+- **Hotset-based contention modeling** - configurable hot key probability and hot set size
+- **Benchmarking** - throughput (txns/sec), p50/p95/p99 latency, retry rate across thread counts and contention levels
+- **Automated experiment runner** - sweep threads and contention for both protocols
+- **Visualization** - Python plotting scripts for all benchmark results
 
 ---
 
@@ -147,30 +147,29 @@ Plots are saved to `plots/`.
 ## Benchmark Results
 
 ### Throughput vs Threads
-
-![Throughput vs Threads - Workload 1](plots/workload1_throughput_vs_threads.png)
-![Throughput vs Threads - Workload 2](plots/workload2_throughput_vs_threads.png)
+| Workload 1 | Workload 2 |
+|------------|------------|
+| ![](plots/workload1_throughput_vs_threads.png) | ![](plots/workload2_throughput_vs_threads.png) |
 
 ### Throughput vs Contention
-
-![Throughput vs Contention - Workload 1](plots/workload1_throughput_vs_contention.png)
-![Throughput vs Contention - Workload 2](plots/workload2_throughput_vs_contention.png)
+| Workload 1 | Workload 2 |
+|------------|------------|
+| ![](plots/workload1_throughput_vs_contention.png) | ![](plots/workload2_throughput_vs_contention.png) |
 
 ### Response Time Distribution
-
-![Response Distribution - Workload 1](plots/workload1_response_distribution.png)
-![Response Distribution - Workload 2](plots/workload2_response_distribution.png)
+| Workload 1 | Workload 2 |
+|------------|------------|
+| ![](plots/workload1_response_distribution.png) | ![](plots/workload2_response_distribution.png) |
 
 ### Response Time vs Contention
-
-![Response vs Contention - Workload 1](plots/workload1_response_vs_contention.png)
-![Response vs Contention - Workload 2](plots/workload2_response_vs_contention.png)
+| Workload 1 | Workload 2 |
+|------------|------------|
+| ![](plots/workload1_response_vs_contention.png) | ![](plots/workload2_response_vs_contention.png) |
 
 ### Retry Rate vs Contention
-
-![Retries vs Contention - Workload 1](plots/workload1_retries_vs_contention.png)
-![Retries vs Contention - Workload 2](plots/workload2_retries_vs_contention.png)
-
+| Workload 1 | Workload 2 |
+|------------|------------|
+| ![](plots/workload1_retries_vs_contention.png) | ![](plots/workload2_retries_vs_contention.png) |
 ---
 
 ## Architecture
