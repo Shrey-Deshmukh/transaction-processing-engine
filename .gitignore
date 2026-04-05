@@ -1,0 +1,18 @@
+# Build artifacts
+build/
+*.o
+*.a
+
+# RocksDB runtime data
+rocksdb_data/
+
+# Generated results
+results/
+
+# Vim swap files
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
